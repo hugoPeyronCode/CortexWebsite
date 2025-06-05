@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cortex</title>
+  <style>
+    body {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      background: #ffffff;
+      color: #000000;
+      margin: 0;
+      padding: 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+    button {
+      font: inherit;
+      padding: 0.5rem 1rem;
+      border: 1px solid black;
+      background: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #000;
+      color: #fff;
+    }
+    .note {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #444;
+    }
+    .app-link {
+      margin-top: 3rem;
+      font-size: 1rem;
+    }
+    .app-link a {
+      text-decoration: underline;
+      color: inherit;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cortex</h1>
+  <p>Play smart.</p>
+
+  <button onclick="copyEmail()">📋 Copy contact email</button>
+  <div class="note">contact@cortex.com</div>
+
+  <div class="app-link">
+    <p>Download our app (coming soon): <a href="#">Link will go here</a></p>
+  </div>
+
+  <script>
+    function copyEmail() {
+      navigator.clipboard.writeText("contact@cortex.com").then(() => {
+        alert("Email copied to clipboard!");
+      });
+    }
+  </script>
+</body>
+</html>
