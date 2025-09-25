@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "6742649363.com.voodoo.almanac",
+        "paths": [ "/invite/*" ]
+      }
+    ]
+  }
+}
