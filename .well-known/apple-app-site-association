@@ -4,7 +4,10 @@
     "details": [
       {
         "appID": "KK3AL78VZ5.com.voodoo.almanac",
-        "paths": [ "/invite/*" ]
+        "paths": [
+          "/invite/*",
+          "/profile/*"
+        ]
       }
     ]
   }
