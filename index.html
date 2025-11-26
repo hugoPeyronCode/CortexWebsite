@@ -5,6 +5,9 @@
     <title>The Almanac – Cortex</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --page-bg: #F6F2EF;
@@ -16,63 +19,90 @@
             box-sizing: border-box;
         }
 
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
         body {
             margin: 0;
-            padding: 60px 20px 40px;
             background: var(--page-bg);
-            font-family: Georgia, serif;
+            font-family: 'Newsreader', serif;
             color: var(--accent);
             text-align: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Hepsini ortalamak için wrapper */
+        .page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         /* Title image */
         .title-image {
-            width: 300px; /* adjust size as you wish */
-            margin: 0 auto 40px;
+            width: 300px;
+            margin: 0 auto 32px;
             display: block;
         }
 
         /* App icon */
         .app-icon-wrapper {
-            width: 100px;
-            margin: 0 auto -50px;
+            width: 96px;
+            margin: 0 auto -48px;
+            z-index: 1;
         }
 
         .app-icon-img {
             width: 100%;
+            display: block;
         }
 
         /* Promo text block */
         .promo-block {
             background: var(--card-bg);
             border-radius: 26px;
-            padding: 70px 30px 50px;
-            max-width: 480px;
-            margin: 0 auto 48px;
+            padding: 80px 96px 56px;
+            margin: 0 auto 56px;
             border: 1px solid rgba(48, 48, 48, 1);
+            font-weight: 600;
+            width: min(1500px, 100%);
         }
 
         .promo-block p {
             margin: 0 0 40px;
-            font-size: 20px;
-            line-height: 1.45;
+            font-size: 1.75rem;   /* mobile ~28px */
+            line-height: 1.35;
+
+
         }
 
         /* App Store image button */
         .store-img {
-            width: 160px;
+            width: 180px;
             height: auto;
         }
 
         footer {
-            margin-top: 40px;
+            margin-top: 16px;
             font-size: 14px;
         }
 
         footer .studio {
-            font-size: 20px;
+            font-size: 32px;
             font-weight: 600;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
+        }
+
+        footer .studio2 {
+            font-size: 1.25rem;
+            font-weight: 400;
+            font-family: 'DM Mono', monospace;
+            color: #303030;
         }
 
         footer a {
@@ -81,49 +111,62 @@
         }
 
         /* Responsive adjustments */
-        @media (max-width: 480px) {
-            .promo-block {
-                padding: 60px 20px 40px;
-            }
-
+        @media (max-width: 768px) {
             .title-image {
                 width: 240px;
+                margin-bottom: 24px;
             }
 
             .app-icon-wrapper {
                 width: 80px;
+                margin-bottom: -40px;
+            }
+
+            .promo-block {
+                padding: 64px 24px 40px;
+                width: calc(100vw - 40px);
+            }
+
+            .promo-block p {
+                font-size: 1.75rem;
             }
 
             .store-img {
-                width: 140px;
+                width: 150px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .promo-block p {
+                font-size: 2rem; /* desktop ~32px */
             }
         }
     </style>
 </head>
 
 <body>
+<div class="page">
+    <!-- Title graphic -->
+    <img src="title.png" alt="The Almanac" class="title-image"/>
 
-<!-- Title graphic -->
-<img src="title.png" alt="The Almanac" class="title-image"/>
+    <!-- App Icon -->
+    <div class="app-icon-wrapper">
+        <img src="appicon.png" alt="App Icon" class="app-icon-img"/>
+    </div>
 
-<!-- App Icon -->
-<div class="app-icon-wrapper">
-    <img src="appicon.png" alt="App Icon" class="app-icon-img"/>
+    <!-- Promo Block -->
+    <div class="promo-block">
+        <p>Begin your journey into<br/>handcrafted puzzles</p>
+
+        <a href="https://apps.apple.com/us/app/the-almanac/id6742649363">
+            <img src="download.svg" alt="Download on the App Store" class="store-img"/>
+        </a>
+    </div>
+
+    <footer>
+        <div class="studio">Cortex</div>
+        <a class="studio2" href="mailto:contact@cortexstudio.io">contact@cortexstudio.io</a>
+    </footer>
 </div>
-
-<!-- Promo Block -->
-<div class="promo-block">
-    <p>Begin your journey into<br/>handcrafted puzzles</p>
-
-    <a href="https://apps.apple.com/us/app/the-almanac/id6742649363">
-        <img src="download.svg" alt="Download on the App Store" class="store-img"/>
-    </a>
-</div>
-
-<footer>
-    <div class="studio">Cortex</div>
-    <a href="mailto:contact@cortexstudio.io">contact@cortexstudio.io</a>
-</footer>
-
 </body>
 </html>
