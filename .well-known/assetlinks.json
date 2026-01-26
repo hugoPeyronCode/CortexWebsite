@@ -1,0 +1,10 @@
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+        "namespace": "android_app",
+        "package_name": "com.voodoo.almanac",
+        "sha256_cert_fingerprints": [
+            "87:9A:F4:96:FE:82:5D:CF:DD:FD:08:51:95:12:7E:D6:9A:99:B0:F8:8C:B1:DC:24:88:EE:6A:05:FF:56:BB:68"
+        ]
+    }
+}]
